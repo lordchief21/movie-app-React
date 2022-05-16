@@ -23,23 +23,26 @@
 
 .movieTitle {
     position: relative;
+    display: block;
     top: -80px;
     background: rgb(2,0,36);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.352) 0%, rgba(0,0,0,1) 35%, rgb(56, 1, 1) 100%);;
     font-size: 2rem;
     height: 275px;
     border-radius: 5%;
-    ;
+    
     
 
 }
 
 .movieTitle span {
-    position: relative;
+    position: absolute;
     top: 55px;
     font-family: 'Fjalla One', sans-serif;
     font-size: large;
     left: 15px;
+
+    
     
 }
 

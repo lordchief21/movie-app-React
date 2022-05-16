@@ -1,11 +1,25 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import movie from './movieDescription.json'
+import { get } from "../utils/apiRequest";
 import styles from './MovieDetails.module.css'
+import { useEffect, useState } from 'react';
 
 
 export default function MovieDetails () {
 const {movieId} = useParams();
+const [movie, setMovie] =useState(null)
+
+useEffect(() => {
+  get(`/movie/${movieId}`).then((data) =>{
+      setMovie(data);
+  })
+}, [movieId])
+
+
+if(!movie) {
+    return null
+}
+
 
 const imageUrl = `https://image.tmdb.org/t/p/w300/${movie.poster_path}`;
     return (

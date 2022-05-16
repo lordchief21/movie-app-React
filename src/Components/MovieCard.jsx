@@ -9,9 +9,6 @@ export default function MovieCard({movie}) {
        <img src={imageUrl} alt='Poster de película' className={styles.movieImage}  />
        <div className={styles.movieTitle}>
          <span>{movie.title}</span>
-         <div>
-           <span></span>
-         </div>
         </div>
       </li>
     
