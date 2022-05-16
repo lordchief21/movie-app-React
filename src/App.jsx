@@ -1,6 +1,10 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
 import './App.css';
-import { Movielist } from "./Components/MovieList";
+import LandingPage from "./Pages/LandingPage";
+import MovieDetails from "./Pages/MovieDetails";
+
+
 
 
 
@@ -9,10 +13,22 @@ import { Movielist } from "./Components/MovieList";
  function App() {
 
     return ( 
-        <div className="App">
-            <Movielist />
-            
-        </div>
+        <div>
+            <header>
+                <Link to='/'>Home</Link>
+                <Link to='/movie'>Movie</Link>
+
+
+                <h1>Movie</h1>
+            </header>
+            <main>
+                <Routes>
+                    <Route path="/" element = {<LandingPage />} />
+                    <Route path="/movie/:movieId" element={<MovieDetails />} />
+                </Routes>
+            </main>
+        </div>    
+        
         
     )
 }
