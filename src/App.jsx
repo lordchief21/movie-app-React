@@ -21,7 +21,7 @@ import MovieDetails from "./Pages/MovieDetails";
             <main>
                 <Routes>
                     <Route path="/" element = {<LandingPage />} />
-                    <Route path="/movie/:movieId" element={<MovieDetails />} />
+                    <Route exact path="/movie/:movieId" element={<MovieDetails />} />
                 </Routes>
             </main>
         </div>    
